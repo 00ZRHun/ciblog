@@ -5,8 +5,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>ciBlog</title>
 		<!-- <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css"> -->
-		<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-		<!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+		
+		<!-- <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="./assets/css/style.css"> -->	
+		<link rel="stylesheet" href="<?php echo base_url('/assets/css/bootstrap.min.css'); ?>">
+		<link rel="stylesheet" href="<?php echo base_url('/assets/css/style.css'); ?>">	
+		<!-- <link rel="stylesheet" href="{{ asset('./assets/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('./assets/css/style.css') }}"> -->
+
+		<!-- CKEditor -->
+		<script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 	</head>
 	<body>
 
@@ -17,16 +25,21 @@
 	</button>
 
 	<div class="collapse navbar-collapse" id="navbarColor02">
-		<ul class="navbar-nav mr-auto">
-		<li class="nav-item active">
-			<a class="nav-link" href="<?= base_url(''); ?>">Home <span class="sr-only">(current)</span></a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="<? echo base_url(); ?>about">About</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="<? echo base_url(); ?>posts">Blog</a>
-		</li>
+		<ul class="navbar-nav mr-auto navbar-left">
+			<li class="nav-item active">
+				<a class="nav-link" href="<?= base_url(''); ?>">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="<? echo base_url(); ?>about">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="<? echo base_url(); ?>posts">Blog</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav mr-auto navbar-right">
+			<li class="nav-item">
+				<a class="nav-link" href="<? echo base_url(); ?>posts/create">Create Post</a>
+			</li>
 		</ul>
 		<!-- <form class="form-inline my-2 my-lg-0">
 		<input class="form-control mr-sm-2" type="text" placeholder="Search">
